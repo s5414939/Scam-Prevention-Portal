@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Scam Prevention</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <script src="/static/js/script.js"></script>
+    <title>Home - Scam Prevention Portal</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js"></script>
 </head>
 <body>
     <header>
         <h1>Scam Prevention Portal</h1>
         <nav>
             <ul>
-                <li><a href="/base">Home</a></li>
-                <li><a href="/scenarioscover">Scenarios</a></li>
-                <li><a href="/overview">Scams Overview</a></li>
-                <li><a href="/contact">Contact Us</a></li>
-                <li><a href="/ai">AI Scams</a></li>
-                <li><a href="/videosection">Video Section</a></li>
-                <li><a href="{{ url_for('feedback') }}">Feedback Section</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="scenarios.html">Scenarios</a></li>
+                <li><a href="overview.html">Scams Overview</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="ai.html">AI Scams</a></li>
+                <li><a href="videosection.html">Video Section</a></li>
+                <li><a href="feedback.html">Feedback Section</a></li>
             </ul>
         </nav>
     </header>
@@ -26,7 +26,7 @@
         <div class="main-container">
             <h1 class="title">STOP, THINK, READ</h1>
             <div class="content">
-                <img src="{{ url_for('static', filename='images/FrontPage.jpg') }}" alt="FrontCover">
+                <img src="static/images/FrontPage.jpg" alt="Front Cover">
                 <div class="text-box">
                     <h2>Let me ask you...</h2>
                     <ul>
@@ -39,6 +39,8 @@
             </div>
         </div>
     </main>
-    <script src="/static/js/script.js"></script>
+    <footer>
+        <p>© 2024 Senior Scam Safety. All rights reserved.</p>
+    </footer>
 </body>
 </html>
