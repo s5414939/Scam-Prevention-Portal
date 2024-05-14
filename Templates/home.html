@@ -23,6 +23,9 @@
         </nav>
     </header>
     <main>
+      {% extends "base.html" %}
+
+      {% block content %}
         <div class="main-container">
             <h1 class="title">STOP, THINK, READ</h1>
             <div class="content">
@@ -41,4 +44,5 @@
     </main>
     <script src="/static/js/script.js"></script>
 </body>
+{% endblock %}
 </html>
