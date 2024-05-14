@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }} - Scam Prevention</title>
+    <title>Scam Prevention Portal</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
@@ -12,19 +12,21 @@
         <h1>Scam Prevention Portal</h1>
         <nav>
             <ul>
-                <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('scenarioscover') }}">Scenarios</a></li>
-                <li><a href="{{ url_for('overview') }}">Scams Overview</a></li>
-                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
-                <li><a href="{{ url_for('ai') }}">AI Scams</a></li>
-                <li><a href="{{ url_for('videosection') }}">Video Section</a></li>
-                <li><a href="{{ url_for('feedback') }}">Feedback Section</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="scenarios.html">Scenarios</a></li>
+                <li><a href="overview.html">Scams Overview</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="ai.html">AI Scams</a></li>
+                <li><a href="videosection.html">Video Section</a></li>
+                <li><a href="feedback.html">Feedback Section</a></li>
             </ul>
         </nav>
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
-	<script src="/static/js/script.js"></script>
+    <footer>
+        <p>© 2024 Senior Scam Safety. All rights reserved.</p>
+    </footer>
 </body>
 </html>
