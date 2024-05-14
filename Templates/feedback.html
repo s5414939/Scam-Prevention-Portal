@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="feedback-container">
+    <h2>Feedback Form</h2>
+    <form action="{{ url_for('feedback') }}" method="post" aria-labelledby="feedbackFormTitle">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" aria-required="true">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" aria-required="true">
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" placeholder="Enter your feedback here..." aria-required="true"></textarea>
+
+        <button type="submit" aria-describedby="submitBtnDesc">Submit Feedback</button>
+        <div id="submitBtnDesc" class="visually-hidden">Click to submit your feedback</div>
+    </form>
+</div>
+<!-- Back to Home Button -->
+<div class="back-home">
+    <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
+</div>
+{% endblock %}
+
+#Added ARIA HTML code. Add more to other sections

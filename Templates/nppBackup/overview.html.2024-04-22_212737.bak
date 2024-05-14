@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Types of Scams</h2>
+<p>Detailed descriptions of various scams such as employment scams, romance scams, email scams, and more.</p>
+<ul>
+    <li>Employment Scams</li>
+    <li>Romance Scams</li>
+    <li>Email Scams</li>
+    <!-- Add other scams as listed in your guide -->
+</ul>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Scams Overview</h2>
+    <p>Details about various scams...</p>
+{% endblock %}

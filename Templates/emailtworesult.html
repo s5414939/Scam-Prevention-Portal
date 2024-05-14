@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Scam Result</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="email-result-container">
+      <h1 class="main-title">Its A Scam!</h1>
+      <div class="email-images">
+          <div class="image-container">
+              <img src="/static/images/scenario4.1.jpg" alt="Image Description 1">
+              <h3>Did you guess right?</h3>
+          </div>
+      </div>
+</body>
+<!-- Back to Home Button -->
+<div class="back-home">
+    <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
+</div>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}

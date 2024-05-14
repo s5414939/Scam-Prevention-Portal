@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="scenario-container" id="scenario1" style="display:none;">
+    <h2>INCOMING CALL...</h2>
+    <div class="caller-profile">
+        <img src="{{ url_for('static', filename='images/scenario1.jpg') }}" alt="Caller Jane">
+        <ul>
+            <li>Female – “Jane”</li>
+            <li>Informative</li>
+            <li>Confident</li>
+            <li>Patient</li>
+        </ul>
+    </div>
+    <div class="claim">
+        <h3>THE CLAIM:</h3>
+        <p>Your phone contract is coming to an end, would you like to renew your contract with us?</p>
+        <p>Jane has called and is claiming to work for a phone company. She is asking if you are available to talk about your supposed current phone contract as it is coming to an end and she would like to discuss new contract options with you. She wants you to stay with the company and has access to your name, address, and the end date of your contract.</p>
+    </div>
+    <div class="requests">
+        <h3>REQUESTS:</h3>
+        <p>Jane and I discussed the available contract options, and we agreed on the one that best suited my needs. She mentioned that the new contract would begin immediately once my current one ends. To confirm my preferred payment method, Jane asked me to provide the last 4 digits of one of my bank cards.</p>
+    </div>
+    <div class="decision-buttons">
+        <button onclick="location.href='{{ url_for('janescenarioresult') }}'">Yes</button>
+        <button>No</button>
+    </div>
+</div>
+
+<!-- New Scenario -->
+<div class="scenario-container" id="scenario2" style="display:none;">
+    <h2>INCOMING CALL...</h2>
+    <div class="caller-profile">
+        <img src="{{ url_for('static', filename='images/scenario2.jpg') }}" alt="Caller Mark">
+        <ul>
+             <li>Male – “Matthew”</li>
+            <li>Informative</li>
+            <li>Knowledgeable</li>
+            <li>Persistent</li>
+            <li>This number has called you before</li>
+        </ul>
+    </div>
+    <div class="claim">
+        <h3>THE CLAIM:</h3>
+        <p>Would you like to be transferred to a cheaper rewards plan with our drainage protection company?</p>
+        <p>Matthew is calling from a drainage cover company and addresses you by your full name, address, and date of birth to confirm his legitimacy. He informs you that you currently have an existing plan with the company, but suggests that it would be beneficial for you to switch to an alternative plan called the "Cheaper Rewards Plan," which offers a lower annual rate. He also mentions that, due to your age, you are entitled to these discounted rates.</p>
+    </div>
+    <div class="requests">
+        <h3>REQUESTS:</h3>
+        <p>After Matthew explains the additional benefits of the new plan, he asks if you have full control of your bank details, suggesting that you may have a power of attorney. You assume this is because of your elder age bracket.</p>
+    </div>
+    <div class="decision-buttons">
+        <button onclick="location.href='{{ url_for('markscenarioresult') }}'">Yes</button>
+        <button>No</button>
+    </div>
+</div>
+
+<!-- Scenario Navigation Buttons -->
+<div class="scenario-navigation">
+    <button onclick="prevScenario()">Previous</button>
+    <button onclick="nextScenario()">Next</button>
+</div>
+
+{% endblock %}

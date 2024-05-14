@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Interactive Scenarios</h2>
+<p>Click on the questions below to learn how to recognize and avoid scams.</p>
+
+<div class="scenario">
+    <img src="{{ url_for('static', filename='images/scenario1.jpg') }}" alt="Scenario 1">
+    <p><strong>Scenario 1: Employment Scam</strong></p>
+    <p>Imagine you are offered a job that requires you to pay money upfront. What should you do?</p>
+    <button onclick="alert('Incorrect. You should never have to pay to get a job.');">Pay the fee and start working</button>
+    <button onclick="alert('Correct! Legitimate jobs will never ask for money upfront.');">Refuse and report the scam</button>
+</div>
+
+<!-- Repeat for each scenario based on the content in your guide -->
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="scams-overview">
+    <h2>Landline Nuisance Callers</h2>
+    
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='images/name-dob-address.png') }}" alt="Asking for Name, DOB, or Address">
+        <div>
+            <p><strong>Is the caller asking you for your name, Date of Birth (D.O.B), or address?</strong></p>
+            <p>This can be a clear indication of voice phishing whereby the caller attempts to trick users into thinking they are a legitimate company to in return gain sensitive information from you!</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='images/impatient-caller.png') }}" alt="Impatient Caller">
+        <div>
+            <p><strong>Is the caller being impatient and demanding?</strong></p>
+            <p>This can be a clear indication that they are trying to take advantage of you by trying to gain your sensitive data through pressure tactics.</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='images/robotic-voice.png') }}" alt="Robotic Voice Caller">
+        <div>
+            <p><strong>Does the caller sound like a robot?</strong></p>
+            <p>If so, it might be an automated call that was previously recorded using a human voice or computer. These calls can be quite convincing, but not all of them are harmless. That's why it's important to identify the number calling you and be aware of the questions and answers they are trying to retrieve from you.</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='images/bank-details.png') }}" alt="Asking for Bank Details">
+        <div>
+            <p><strong>Is the caller asking for your bank details?</strong></p>
+            <p>Stop right here! No legitimate company would ask for these details over the phone. Don’t let them fool you!</p>
+        </div>
+    </div>
+
+    <h3>Fraudster Tactics</h3>
+</div>
+{% endblock %}

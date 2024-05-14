@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="scams-overview">
+    <h2>Landline Nuisance Callers</h2>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='Images/Landline1.jpg') }}" alt="Asking for Name, DOB, or Address">
+        <div>
+            <p><strong>Is the caller asking you for your name, Date of Birth (D.O.B), or address?</strong></p>
+            <p>This can be a clear indication of voice phishing whereby the caller attempts to trick users into thinking they are a legitimate company to in return gain sensitive information from you!</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='Images/Landline2.jpg') }}" alt="Impatient Caller">
+        <div>
+            <p><strong>Is the caller being impatient and demanding?</strong></p>
+            <p>This can be a clear indication that they are trying to take advantage of you by trying to gain your sensitive data through pressure tactics.</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='Images/Landline3.jpg') }}" alt="Robotic Voice Caller">
+        <div>
+            <p><strong>Does the caller sound like a robot?</strong></p>
+            <p>If so, it might be an automated call that was previously recorded using a human voice or computer. These calls can be quite convincing, but not all of them are harmless. That's why it's important to identify the number calling you and be aware of the questions and answers they are trying to retrieve from you.</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='Images/Landline4.jpg') }}" alt="Asking for Bank Details">
+        <div>
+            <p><strong>Is the caller asking for your bank details?</strong></p>
+            <p>Stop right here! No legitimate company would ask for these details over the phone. Don’t let them fool you!</p>
+        </div>
+    </div>
+
+    <div class="phishing-section">
+    <h2>PHISHING EMAIL ARTISTS</h2>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='images/Phishing1.jpg') }}" alt="Unusual Email Address">
+        <div>
+            <p><strong>Is the email address unusual?</strong> If an email address domain consists of random characters that have no meaning, chances are it has been automatically generated and is not from a legitimate source.</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='images/Phishing2.jpg') }}" alt="Grammar Mistakes">
+        <div>
+            <p><strong>Are there spelling and grammar mistakes?</strong> Organizations that are valid will not have grammatical errors in their emails. If you notice any, it could be a sign of fraud.</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='images/Phishing3.jpg') }}" alt="Suspicious Links">
+        <div>
+            <p><strong>Is there encouragement to click on an unknown link?</strong> No email should prompt you to click on a link. Instead, hover over the link to check the URL, and ensure it directs you to an authentic website.</p>
+        </div>
+    </div>
+
+    <div class="scam-item">
+        <img src="{{ url_for('static', filename='images/Phishing4.jpg') }}" alt="Request for Personal Info">
+        <div>
+            <p><strong>Is there a request for you to share personal information?</strong> It is never safe to share personal and sensitive information via email, especially when it comes to banking and identification details.</p>
+        </div>
+    </div>
+</div>
+<!-- Back to Home Button -->
+<div class="back-home">
+    <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
+</div>
+{% endblock %}

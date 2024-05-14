@@ -1,0 +1,60 @@
+// Function to display the result explanation
+function showResult(decision) {
+    var explanationText = '';
+    
+    // Check the decision and prepare the explanation text
+    if (decision === 'legitimate') {
+        explanationText = 'This scenario is actually a SCAM. No legitimate company would ask for sensitive payment information such as bank card numbers over the phone.';
+    } else if (decision === 'scam') {
+        explanationText = 'You’re correct! It is a SCAM. Well done for being cautious and protecting your personal information.';
+    }
+
+    // Get the result explanation div and update it
+    var resultDiv = document.getElementById('result-explanation');
+    resultDiv.innerHTML = explanationText;
+    
+    // Change the class to show the div
+    resultDiv.className = 'result-shown';
+	
+	// Function to evaluate the scenario decision and redirect or provide feedback
+function evaluateScenario(decision) {
+    if (decision === 'legitimate') {
+        // If the decision is correct, redirect to the result page
+        window.location.href = '/jane-scenario-result'; // Use the correct URL endpoint
+    } else {
+        // If the decision is incorrect, show an alert
+        alert("Incorrect. Please try again!");
+    }
+	
+	var currentScenarioIndex = 1;
+var totalScenarios = 3; // Update with the total number of scenarios
+
+function showScenario(index) {
+    // Hide all scenarios
+    for (var i = 1; i <= totalScenarios; i++) {
+        var scenario = document.getElementById('scenario' + i);
+        scenario.style.display = 'none';
+    }
+    // Show the active scenario
+    var activeScenario = document.getElementById('scenario' + index);
+    activeScenario.style.display = 'block';
+    currentScenarioIndex = index;
+}
+
+function nextScenario() {
+    if (currentScenarioIndex < totalScenarios) {
+        showScenario(currentScenarioIndex + 1);
+    }
+}
+
+function prevScenario() {
+    if (currentScenarioIndex > 1) {
+        showScenario(currentScenarioIndex - 1);
+    }
+}
+
+// Initialize the first scenario
+showScenario(currentScenarioIndex);
+}
+
+

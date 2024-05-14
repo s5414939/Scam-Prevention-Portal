@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mark-result-container">
+    <h2>It's A Scam!</h2>
+    <div class="mark-result-details">
+        <p>If you receive a call from a company that you haven't contacted, do some research before providing any personal or financial information.</p>
+        <p>Check the phone number! They have called you before and it's associated with a known scam organisation.</p>
+        <p>A genuine salesperson would never ask for personal details such as power of attorney.</p>
+        <p>Stay up to date with your subscriptions. This will help you spot scammers and reduce your chances of being fooled.</p>
+        <p>Be cautious, personal information alone doesn't guarantee authenticity.</p>
+    </div>
+    <h3>Did you guess right?</h3>
+</div>
+<!-- Back to Home Button -->
+<div class="back-home">
+    <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

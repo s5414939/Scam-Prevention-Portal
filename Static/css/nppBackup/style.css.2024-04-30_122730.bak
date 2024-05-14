@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.scenario {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.scenario img {
+    width: 100%; /* Responsive images */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.scenario p {
+    font-size: 18px; /* Larger text for readability */
+}
+
+.scenario button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.scam-section {
+    background-color: #f9f9f9;
+    border-left: 5px solid #007BFF;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.scam-section h3 {
+    color: #333;
+}
+
+.scam-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.scam-section img {
+    width: 100%;  /* Responsive image */
+    height: auto;
+    margin-top: 20px;
+}
+.scams-overview h2 {
+    font-size: 1.8em;
+    color: #CC0000;
+    margin-bottom: 10px;
+}
+
+.scams-overview h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #CC0000;
+}
+
+.scams-overview p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.scams-overview p strong {
+    font-weight: bold;
+}
+.scams-overview .scam-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.scams-overview .scam-item img {
+    max-width: 100px; /* Adjust width as needed */
+    margin-right: 20px;
+}
+
+.scams-overview .scam-item div {
+    flex: 1;
+}
+
+

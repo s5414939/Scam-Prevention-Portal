@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--Scenario 1 -->
+<div class="scenario-container" id="scenario1">
+    <h2>INCOMING CALL...</h2>
+    <div class="caller-profile">
+        <img src="{{ url_for('static', filename='images/scenario1.jpg') }}" alt="Caller Jane">
+        <ul>
+            <li>Female – “Jane”</li>
+            <li>Informative</li>
+            <li>Confident</li>
+            <li>Patient</li>
+        </ul>
+    </div>
+    <div class="claim">
+        <h3>THE CLAIM:</h3>
+        <p>Your phone contract is coming to an end, would you like to renew your contract with us?</p>
+        <p>Jane has called and is claiming to work for a phone company. She is asking if you are available to talk about your supposed current phone contract as it is coming to an end and she would like to discuss new contract options with you. She wants you to stay with the company and has access to your name, address, and the end date of your contract.</p>
+    </div>
+    <div class="requests">
+        <h3>REQUESTS:</h3>
+        <p>Jane and I discussed the available contract options, and we agreed on the one that best suited my needs. She mentioned that the new contract would begin immediately once my current one ends. To confirm my preferred payment method, Jane asked me to provide the last 4 digits of one of my bank cards.</p>
+    </div>
+    <div class="Verdict">
+      <h3>Do you think this is a scam?<h3>
+      <h4> Select 'Yes' or 'No' below </h4>
+    </div>
+    <div class="decision-buttons">
+          <button onclick="showWrongButtonAlert()">Yes</button>  <!-- Triggers alert when clicked -->
+          <button onclick="location.href='{{ url_for('janescenarioresult') }}'">No</button>
+    </div>
+</div>
+
+<!--Scenario 2 -->
+<div class="scenario-container" id="scenario2" style="display:none;">
+    <h2>INCOMING CALL...</h2>
+    <div class="caller-profile">
+        <img src="{{ url_for('static', filename='images/scenario2.jpg') }}" alt="Caller Mark">
+        <ul>
+            <li>Male – “Matthew”</li>
+            <li>Informative</li>
+            <li>Knowledgeable</li>
+            <li>Persistent</li>
+            <li>This number has called you before</li>
+        </ul>
+    </div>
+    <div class="claim">
+        <h3>THE CLAIM:</h3>
+        <p>Would you like to be transferred to a cheaper rewards plan with our drainage protection company?</p>
+        <p>Matthew is calling from a drainage cover company and addresses you by your full name, address, and date of birth to confirm his legitimacy. He informs you that you currently have an existing plan with the company, but suggests that it would be beneficial for you to switch to an alternative plan called the "Cheaper Rewards Plan," which offers a lower annual rate. He also mentions that, due to your age, you are entitled to these discounted rates.</p>
+    </div>
+    <div class="requests">
+        <h3>REQUESTS:</h3>
+        <p>After Matthew explains the additional benefits of the new plan, he asks if you have full control of your bank details, suggesting that you may have a power of attorney. You assume this is because of your elder age bracket.</p>
+    </div>
+    <div class="Verdict">
+      <h3>Do you think this is a scam?<h3>
+      <h4> Select 'Yes' or 'No' below </h4>
+      </div>
+      <div class="decision-buttons">
+            <button onclick="showWrongButtonAlert()">No</button>  <!-- Triggers alert when clicked -->
+            <button onclick="location.href='{{ url_for('mark_scenario_result') }}'">Yes</button>
+    </div>
+</div>
+
+<!--Scenario 3 -->
+<div class="scenario-container" id="scenario3" style="display:none;">
+    <h2>EMAIL INBOX...</h2>
+    <div class="email-profile">
+        <img src="{{ url_for('static', filename='images/scenario3.jpg') }}" alt="Email Screenshot">
+        <ul>
+            <li>Sender: Amazon Prime</li>
+            <li>Subject: PRIME UNAUTHORIZED SIGN-IN</li>
+            <li>Email Address: sign-in.mzhyhykplyqxrpks-apps@palperang.phonephun.US</li>
+            <li>Time Sent: Fri 01/03/2024 21:54</li>
+        </ul>
+    </div>
+    <div class="claim">
+        <h3>THE CLAIM:</h3>
+        <p>You receive an unexpected email claiming to be from Amazon with a notification about an issue with your 'case', urging you to read an attachment (PDF) for details.</p>
+        <p>The email is marked as junk, indicating potential security concerns.</p>
+    </div>
+    <div class="requests">
+        <h3>REQUESTS:</h3>
+        <p>The email asks you to review the attachment named 'Report_Details#73468912893...' which has been blocked. It implies urgency and potential security issues with your account.</p>
+    </div>
+    <div class="Verdict">
+      <h3>Do you think this is a scam?</h3>
+      <h4> Select 'Yes' or 'No' below </h4>
+    </div>
+    <div class="decision-buttons">
+          <button onclick="showWrongButtonAlert()">No</button>  <!-- Triggers alert when clicked -->
+          <button onclick="location.href='{{ url_for('emailoneresult') }}'">Yes</button>
+    </div>
+</div>
+
+<!--Scenario 4 -->
+<div class="scenario-container" id="scenario4" style="display:none;">
+    <h2>EMAIL INBOX...</h2>
+    <div class="email-profile2">
+        <img src="{{ url_for('static', filename='images/scenario4.jpg') }}" alt="Email Screenshot2">
+        <ul>
+            <li>Sender: Lloyds Direct</li>
+            <li>Subject: Prescription Delivery</li>
+            <li>Email Address: eJSoGGdmq@agricoma.online</li>
+            <li>Time Sent: Fri 21/02/2024 21:50</li>
+        </ul>
+    </div>
+    <div class="claim">
+        <h3>THE CLAIM:</h3>
+        <p>You receive an unexpected email claiming to be from Lloyds Pharmacy alerting you to a subscription email.</p>
+    </div>
+    <div class="requests">
+        <h3>REQUESTS:</h3>
+        <p>The email asks if you want to unsubscribe from email alerts to select the 'here' button highlighted and underlined in blue.</p>
+    </div>
+    <div class="Verdict">
+      <h3>Do you think this is a scam?</h3>
+      <h4> Select 'Yes' or 'No' below </h4>
+    </div>
+    <div class="decision-buttons">
+          <button onclick="showWrongButtonAlert()">No</button>  <!-- Triggers alert when clicked -->
+          <button onclick="location.href='{{ url_for('emailtworesult') }}'">Yes</button>
+    </div>
+</div>
+
+<!--Scenario 5 -->
+<div class="scenario-container" id="scenario5" style="display:none;">
+    <h2>EMAIL INBOX...</h2>
+    <div class="email-profile3">
+        <img src="{{ url_for('static', filename='images/scenario5.jpg') }}" alt="Email Screenshot3">
+        <ul>
+            <li>Sender: Uber Eats</li>
+            <li>Subject: Get £10 off your next 5 orders</li>
+            <li>Email Address: uber@uber.com</li>
+            <li>Time Sent: Sun 31/03/2024 12:15</li>
+        </ul>
+    </div>
+    <div class="claim">
+        <h3>THE CLAIM:</h3>
+        <p>You receive an email claiming to be from Uber Eats alerting you to a tempting offer.</p>
+    </div>
+    <div class="requests">
+        <h3>REQUESTS:</h3>
+        <p>The email offers £10 off your next 5 orders when you select the 'order now' button.</p>
+    </div>
+    <div class="Verdict">
+      <h3>Do you think this is a scam?</h3>
+      <h4> Select 'Yes' or 'No' below </h4>
+    </div>
+    <div class="decision-buttons">
+          <button onclick="showWrongButtonAlert()">Yes</button>  <!-- Triggers alert when clicked -->
+          <button onclick="location.href='{{ url_for('emailthreeresult') }}'">No</button>
+    </div>
+</div>
+
+<!--Scenario 6 -->
+<div class="scenario-container" id="scenario6" style="display:none;">
+    <h2>EMAIL INBOX...</h2>
+    <div class="email-profile4">
+        <img src="{{ url_for('static', filename='images/scenario6.jpg') }}" alt="Email Screenshot4">
+        <ul>
+            <li>Sender: Halifax</li>
+            <li>Subject: New Message</li>
+            <li>Email Address: donotreply@halifax.co.uk</li>
+            <li>Time Sent: Sat 06/04/2024 00:43</li>
+        </ul>
+    </div>
+    <div class="claim">
+        <h3>THE CLAIM:</h3>
+        <p>You receive an email supposedly from Halifax, alerting you to a new message on your banking application.</p>
+    </div>
+    <div class="requests">
+        <h3>REQUESTS:</h3>
+        <p>Asking you to access your messages by providing links to download the banking app.</p>
+    </div>
+    <div class="Verdict">
+      <h3>Do you think this is a scam?</h3>
+      <h4> Select 'Yes' or 'No' below </h4>
+    </div>
+    <div class="decision-buttons">
+          <button onclick="showWrongButtonAlert()">Yes</button>  <!-- Triggers alert when clicked -->
+          <button onclick="location.href='{{ url_for('emailfourresult') }}'">No</button>
+      </div>
+    </div>
+
+
+<!-- Scenario Navigation Buttons -->
+<div class="scenario-navigation nav-buttons">
+    <button id="prevButton" class="button nav-button">Previous</button>
+    <button id="nextButton" class="button nav-button">Next</button>
+</div>
+
+<!-- Back to Home Button -->
+<div class="back-home">
+    <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="video-section">
+    <h2>Educational Videos</h2>
+    <p>
+Dear valued viewers, I encourage you to explore two insightful videos that underscore the importance of protecting your personal information in today's digital age. The first video subtly demonstrates the surprising ease with which one's privacy can be compromised online, serving as a crucial reminder to be mindful of what we share on the internet. The second video features an engaging presentation by a so-called mind reader, revealing the astonishing amount of personal details that are publicly accessible. These videos are not just educational but are also designed to prompt reflection on the potential consequences of oversharing online. I highly recommend watching these videos to better understand the risks and learn how to safeguard your personal information. They are essential viewing for anyone keen to navigate our digital world safely.</p>
+
+    <!-- Video 1 -->
+    <div class="video">
+        <h3>How Private Is Your Personal Information?</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yrjT8m0hcKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video">
+        <h3>Amazing Mind Reader Reveals His 'Gift'</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/F7pYHN9iC9I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="video">
+        <h3>How Criminals Use AI and Voice Deepfakes to Scam You?'</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/EGEID-_XWCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- Back to Home Button -->
+    <div class="back-home">
+        <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
+</div>
+</div>
+{% endblock %}

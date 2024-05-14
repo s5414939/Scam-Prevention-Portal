@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="scenario-container">
+    <h2>INCOMING CALL...</h2>
+    <!-- Caller Profile -->
+    <div class="caller-profile">
+        <img src="{{ url_for('static', filename='images/caller-profile.jpg') }}" alt="Caller Profile">
+        <p>Female – “Jane”<br>Informative<br>Confident<br>Patient</p>
+    </div>
+    
+    <!-- Scenario Description -->
+    <div class="scenario-description">
+        <h3>THE CLAIM:</h3>
+        <p>Your phone contract is coming to an end, would you like to renew your contract with us?</p>
+        <!-- Scenario details go here -->
+    </div>
+    
+    <!-- User Decision Buttons -->
+    <div class="decision-buttons">
+        <button onclick="showResult('legitimate')">Yes</button>
+        <button onclick="showResult('scam')">No</button>
+    </div>
+    
+    <!-- Result Explanation -->
+    <div id="result-explanation" class="result-hidden">
+        <!-- Explanation will be inserted here based on user's choice -->
+    </div>
+	
+	<!-- Inside your scenario description block -->
+	<div class="scenario-actions">
+    <a href="{{ url_for('jane_scenario_result') }}" class="btn">Legitimate</a>
+    <!-- No button for scam as you'd provide a different link or action -->
+	</div>
+
+<!-- ... existing content ... -->
+	<div class="decision-buttons">
+    <a href="{{ url_for('jane_scenario_result') }}" class="button">Yes</a>
+    <button onclick="showResult('scam')">No</button>
+	</div>
+<!-- ... existing content ... -->
+
+</div>
+{% endblock %}

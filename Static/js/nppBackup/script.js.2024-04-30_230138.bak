@@ -1,0 +1,95 @@
+// Function to display the result explanation
+function showResult(decision, scenario) {
+    var explanationText = '';
+
+    // Determine the explanation based on the scenario and decision
+    switch (scenario) {
+        case 'jane':
+            if (decision === 'legitimate') {
+                explanationText = 'This scenario is actually a SCAM. No legitimate company would ask for sensitive payment information such as bank card numbers over the phone.';
+            } else if (decision === 'scam') {
+                explanationText = 'You’re correct! It is a SCAM. Well done for being cautious and protecting your personal information.';
+            }
+            break;
+        case 'matthew':
+            if (decision === 'legitimate') {
+                explanationText = 'You’ve been deceived! This scenario is a SCAM. No legitimate company should need to confirm your identity by asking for such personal details unless it’s through secure means.';
+            } else if (decision === 'scam') {
+                explanationText = 'Exactly right! It is indeed a SCAM. Always be wary of calls asking for personal financial control information.';
+            }
+            break;
+        case 'stephanie': // Hypothetical new scenario for demonstration
+            if (decision === 'legitimate') {
+                explanationText = 'Incorrect. Stephanie’s request is typical of a phishing attempt.';
+            } else if (decision === 'scam') {
+                explanationText = 'Correct! Always verify who you are speaking to before discussing personal details.';
+            }
+            break;
+        default:
+            explanationText = 'No scenario matched. Please check the scenario name.';
+            break;
+    }
+
+    // Update the result explanation div
+    var resultDiv = document.getElementById('result-explanation');
+    resultDiv.innerHTML = explanationText;
+    resultDiv.className = 'result-shown';
+}
+
+// Function to evaluate the scenario decision and redirect or provide feedback
+function evaluateScenario(decision, scenario) {
+    // Determine the result page URL based on the scenario and decision
+    var resultUrl = '';
+    switch (scenario) {
+        case 'jane':
+            resultUrl = decision === 'legitimate' ? '/janescenarioresult' : '';
+            break;
+        case 'matthew':
+            resultUrl = decision === 'legitimate' ? '/matthewscenarioresult' : '';
+            break;
+    }
+
+    // Redirect or alert based on the decision
+    if (resultUrl) {
+        window.location.href = resultUrl; // Redirect to the result page if the decision is 'legitimate'
+    } else {
+        alert("Incorrect. Please try again!"); // Show an alert if the decision is incorrect
+    }
+}
+
+<script>
+    var currentScenarioIndex = 1;
+    var totalScenarios = 2; // Update with the total number of scenarios
+
+    function showScenario(index) {
+        // Hide all scenarios
+        for (var i = 1; i <= totalScenarios; i++) {
+            var scenario = document.getElementById('scenario' + i);
+            scenario.style.display = 'none';
+        }
+        // Show the active scenario
+        var activeScenario = document.getElementById('scenario' + index);
+        activeScenario.style.display = 'block';
+        currentScenarioIndex = index;
+    }
+
+    function nextScenario() {
+        if (currentScenarioIndex < totalScenarios) {
+            showScenario(currentScenarioIndex + 1);
+        }
+    }
+
+    function prevScenario() {
+        if (currentScenarioIndex > 1) {
+            showScenario(currentScenarioIndex - 1);
+        }
+    }
+
+    // Initialize the first scenario
+    showScenario(currentScenarioIndex);
+</script>
+
+// Optional: Add event listeners or DOMContentLoaded to ensure the DOM is fully loaded before running scripts
+document.addEventListener('DOMContentLoaded', function() {
+    // Code to initialize or attach event listeners
+});

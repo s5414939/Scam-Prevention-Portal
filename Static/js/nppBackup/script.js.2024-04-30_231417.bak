@@ -1,0 +1,71 @@
+// Function to display the result explanation
+function showResult(decision, scenario) {
+    var explanationText = '';
+
+    switch (scenario) {
+        case 'jane':
+            explanationText = decision === 'legitimate' ?
+                'This scenario is actually a SCAM. No legitimate company would ask for sensitive payment information such as bank card numbers over the phone.' :
+                'You’re correct! It is a SCAM. Well done for being cautious and protecting your personal information.';
+            break;
+        case 'matthew':
+            explanationText = decision === 'legitimate' ?
+                'You’ve been deceived! This scenario is a SCAM. No legitimate company should need to confirm your identity by asking for such personal details unless it’s through secure means.' :
+                'Exactly right! It is indeed a SCAM. Always be wary of calls asking for personal financial control information.';
+            break;
+        default:
+            explanationText = 'No scenario matched. Please check the scenario name.';
+            break;
+    }
+
+    var resultDiv = document.getElementById('result-explanation');
+    resultDiv.innerHTML = explanationText;
+    resultDiv.className = 'result-shown';
+}
+
+// Function to evaluate the scenario decision and redirect or provide feedback
+function evaluateScenario(decision, scenario) {
+    var resultUrl = '';
+    if (scenario === 'jane' && decision === 'legitimate') {
+        resultUrl = '/janescenarioresult';
+    } else if (scenario === 'matthew' && decision === 'legitimate') {
+        resultUrl = '/matthewscenarioresult';
+    }
+
+    if (resultUrl) {
+        window.location.href = resultUrl;
+    } else {
+        alert("Incorrect. Please try again!");
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    var currentScenarioIndex = 1;
+    var totalScenarios = document.querySelectorAll('.scenario-container').length;
+
+    function showScenario(index) {
+        document.querySelectorAll('.scenario-container').forEach(function(scenario, i) {
+            scenario.style.display = i + 1 === index ? 'block' : 'none';
+        });
+        currentScenarioIndex = index;
+    }
+
+    function nextScenario() {
+        if (currentScenarioIndex < totalScenarios) {
+            showScenario(currentScenarioIndex + 1);
+        }
+    }
+
+    function prevScenario() {
+        if (currentScenarioIndex > 1) {
+            showScenario(currentScenarioIndex - 1);
+        }
+    }
+
+    // Attach event listeners to buttons
+    document.getElementById('prevButton').addEventListener('click', prevScenario);
+    document.getElementById('nextButton').addEventListener('click', nextScenario);
+
+    // Initialize the first scenario
+    showScenario(currentScenarioIndex);
+});

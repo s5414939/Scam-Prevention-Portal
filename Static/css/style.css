@@ -1,0 +1,498 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/*ContactUs CSS*/
+.contact-container {
+    max-width: 800px; /* Limit the width to keep the content readable */
+    margin: 40px auto; /* Center it horizontally and add some margin above and below */
+    padding: 20px; /* Padding inside the container for spacing around the content */
+    background-color: #ffffff; /* White background for readability */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: left; /* Align text to the left for better readability */
+}
+.contact-container h1 {
+    color: #007BFF; /* Theme color for headings */
+    text-align: center; /* Center-align the title */
+    margin-top: 0; /* Remove top margin for tight spacing with container top */
+    padding-bottom: 10px; /* Space below the heading */
+    border-bottom: 2px solid #eee; /* Light line under the heading for separation */
+}
+.contact-container p, .contact-container li {
+    color: #333; /* Dark grey for better readability */
+    font-size: 16px; /* Slightly larger font size for readability */
+    line-height: 1.6; /* Line height for better text flow */
+    margin-bottom: 10px; /* Space between paragraphs and list items */
+}
+
+.contact-container a {
+    color: #007BFF; /* Bright blue for links to stand out */
+    text-decoration: none; /* No underline by default */
+}
+
+.contact-container a:hover {
+    text-decoration: underline; /* Underline on hover for interactivity */
+}
+.contact-container ul {
+    list-style-type: none; /* No bullets to keep it clean */
+    padding: 0; /* Remove padding */
+}
+
+.contact-container li {
+    background-color: #f9f9f9; /* Light background for each item for easy reading */
+    border: 1px solid #eee; /* Subtle border around each item */
+    padding: 10px; /* Padding inside each list item */
+    border-radius: 4px; /* Slightly rounded corners for the list items */
+    margin-bottom: 8px; /* Space between list items */
+}
+
+/* Add styles for contact icons */
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 80px;  /* Adjust the size of the icons as needed */
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 8px;  /* Optional: Add rounded corners for a polished look */
+}
+
+.contact-text {
+    flex-grow: 1;
+}
+/* AI Scams Section */
+.ai-scams-section {
+    background-color: #ffffff; /* Bright background for contrast */
+    color: #333; /* Dark text for better readability */
+    padding: 20px; /* Ample padding for ease of reading */
+    border-radius: 8px; /* Soften edges */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Space between sections */
+    line-height: 1.6; /* Enhanced line spacing */
+    font-size: 18px; /* Increase font size for easier reading */
+}
+
+.ai-scams-section h1, .ai-scams-section h2, .ai-scams-section h3 {
+    color: #0056b3; /* Use a darker shade of blue for headings */
+    margin-top: 20px;
+    margin-bottom: 10px; /* More space around headings */
+    font-size: 22px; /* Larger font size for headings */
+}
+
+.ai-scams-section p, .ai-scams-section li {
+    font-size: 18px; /* Consistent font size for readability */
+    margin-bottom: 10px; /* Adequate spacing between paragraphs */
+}
+
+.ai-scams-section ul {
+    padding-left: 20px; /* Proper indentation for lists */
+}
+
+.ai-scams-section li {
+    list-style-type: disc; /* Clear list item indicators */
+}
+
+.ai-scams-section a {
+    color: #0066cc; /* Bright blue for links to stand out */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.ai-scams-section a:hover {
+    text-decoration: underline; /* Underline links on hover for better interaction visibility */
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 80%; /* Constrain the image width to 80% of its container */
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: auto; /* Center the image within the container */
+}
+.small-image {
+    max-width: 10%; /* Smaller size for the deepfake image */
+
+/* Ensure responsive design */
+@media (max-width: 768px) {
+    .image-container img {
+        width: 100%;
+    }
+  }
+}
+
+/*overview.html text centred allignment */
+.scam-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally in a flex column layout */
+    text-align: center; /* Ensure text is centered */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.scam-item img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+.scam-item div {
+    width: 100%; /* Ensures the text div takes up full width available in .scam-item */
+}
+
+.scenario-cover {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.scenario-cover h1 {
+  color: #333;
+}
+
+.scenario-cover p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.scenario-cover button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.scenario-cover button:hover {
+    background-color: #45a049;
+}
+
+
+.scenario, .scam-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.scenario img, .scam-section img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.scenario p, .scam-section p {
+    font-size: 18px;
+    margin: 20px auto;
+}
+
+.scenario button, .decision-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.scenario button:hover, .decision-buttons button:hover {
+    background-color: #45a049;
+}
+
+.jane-result-container {
+    text-align: center;
+    background-color: #ffe0e9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.jane-result-details {
+    background-color: #228B22;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    position: relative;
+    list-style: none;
+}
+
+.jane-result-details li:before {
+    content: '✓';
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4BB543;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.result-details li {
+    font-size: 16px;
+}
+.mark-result-container {
+    text-align: center;
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.mark-result-details {
+    background-color: #424242;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    list-style: none;
+}
+
+.scams-overview h2, .scams-overview h3 {
+    color: #CC0000;
+}
+
+.scams-overview .scam-item {
+    display: flex;
+    align-items: center;
+}
+
+.scams-overview .scam-item img {
+    max-width: 100px;
+    margin-right: 20px;
+}
+
+.scams-overview .scam-item div {
+    flex: 1;
+}
+
+.email-result-container {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.email-images .image-container {
+    background-color: #333;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.email-images .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.email-result-container1 {
+    background-color: #228B22;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+/* Button general styles */
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #45a049; /* Darker green */
+  border: 2px solid #444; /*Green border to enhance visibility on selection*/
+}
+
+/* Specific styles for navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Adjust spacing from other content if necessary */
+}
+
+.nav-button {
+    padding: 10px 15px; /* Smaller padding for smaller buttons */
+    background-color: #666; /* Different color for distinction */
+    font-weight: bold; /* Make text bold */
+}
+
+.nav-button:hover {
+    background-color: #444; /* Darker on hover */
+    border: 2px solid #4CAF50; /*Green border to enhance visibility on selection*/
+}
+/* Add styles for the Back to Home button */
+.back-home {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-home-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-home-button:hover {
+    background-color: #0056b3;
+}
+
+.feedback-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.feedback-container h2 {
+    text-align: center;
+}
+
+.feedback-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.feedback-container input,
+.feedback-container textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.feedback-container button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedback-container button:hover {
+    background-color: #45a049;
+}
+
+.video-section {
+    font-family: Arial, sans-serif; /* Clear, highly legible font */
+    color: #333; /* Dark grey text for better contrast */
+    background-color: #f4f4f4; /* Light background to reduce glare */
+    padding: 20px; /* Padding around the content for easier viewing */
+    line-height: 1.6; /* Increase line spacing to improve readability */
+}
+
+.video-section h2, .video-section h3 {
+    color: #0056b3; /* Dark blue for headings to distinguish them from other texts */
+    margin-top: 20px;
+}
+
+.video-section p {
+    font-size: 18px; /* Larger text size for easier reading */
+}
+
+.video iframe {
+    width: 100%; /* Full-width videos to maximize visibility */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 560px; /* Maximum width to keep video sizes reasonable */
+    margin-bottom: 20px; /* Space between videos */
+}

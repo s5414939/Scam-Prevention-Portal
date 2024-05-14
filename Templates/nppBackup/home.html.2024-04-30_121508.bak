@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome to Your Scam Prevention Guide</h2>
+<p>Learn how to spot and prevent scams, protecting yourself and your community.</p>
+<a href="/education">Start Learning</a>
+{% endblock %}

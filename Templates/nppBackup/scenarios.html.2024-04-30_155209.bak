@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="scenario-container">
+    <h2>INCOMING CALL...</h2>
+    <!-- Caller Profile -->
+    <div class="caller-profile">
+        <img src="{{ url_for('static', filename='images/scenario1.jpg') }}" alt="Caller Profile">
+        <p>Female – “Jane”<br>Informative<br>Confident<br>Patient</p>
+    </div>
+    
+    <!-- Scenario Description -->
+    <div class="scenario-description">
+        <h3>THE CLAIM:</h3>
+        <p>Your phone contract is coming to an end, would you like to renew your contract with us?</p>
+    </div>
+    
+    <!-- User Decision Buttons -->
+    <div class="decision-buttons">
+        <a href="{{ url_for('janescenarioresult') }}" class="button">Yes</a>
+        <button onclick="showResult('scam')">No</button>
+    </div>
+    
+    <!-- Result Explanation (initially hidden, shown based on user interaction) -->
+    <div id="result-explanation" class="result-hidden">
+        <!-- Explanation will be dynamically inserted here based on user's choice -->
+    </div>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

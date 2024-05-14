@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="contact-container">
+    <h1>Contact Us</h1>
+    <p>If you've fallen victim to a scam, it's crucial to seek support. You're not alone, and assistance is available to help you navigate the aftermath of the situation.</p>
+
+    <ul class="contact-list">
+        <li>
+            <img src="{{ url_for('static', filename='images/999.jpg') }}" alt="Police" class="contact-icon">
+            <strong>The Police:</strong> If you feel threatened or if you're in immediate danger, call 999. If it's not an emergency, call 101.
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/159.png') }}" alt="Bank" class="contact-icon">
+            <strong>Your Bank:</strong> If you've noticed any unusual activity with your bank account, call the centralised number 159 (fraud prevention service) or phone the number on the back of your bank card. If you lost money, your bank may be able to recover it in certain situations – but it's not always possible. Your bank may cancel your current card and send you a new one to stop any other fraudulent transactions from your account.
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/actionFraud.jpg') }}" alt="Action Fraud" class="contact-icon">
+            <strong>Action Fraud:</strong> Report any kind of fraud by giving them a call or reporting it online via their website.
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/victimSupport.jpg') }}" alt="Victim Support" class="contact-icon">
+            <strong>Victim Support:</strong> Provides 24/7 free and confidential support to victims and witnesses of crime in England and Wales.
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/thinkJessica.jpg') }}" alt="Think Jessica" class="contact-icon">
+            <strong>Think Jessica:</strong> If a scam has made you feel anxious, fearful or guilty. They provide emotional and practical help to victims of crimes and scams.
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/citizensAdvice.jpg') }}" alt="Citizens Advice" class="contact-icon">
+            <strong>Citizens Advice:</strong> Contact Citizens Advice for information and advice about how to avoid scams and fraud. Their consumer services also provide information and advice on consumer issues by telephone and online.
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/Samaritans.jpg') }}" alt="Samaritans" class="contact-icon">
+            <strong>Samaritans:</strong> You can call their helpline on 116 123 if you feel low or anxious and need someone to talk to.
+        </li>
+        <li>
+            <img src="{{ url_for('static', filename='images/socialServices.jpg') }}" alt="Social Services" class="contact-icon">
+            <strong>Social Services:</strong> If you need care and support, you can contact your local council's adult social services department. They can provide safeguarding support, and will work with you to consider what action to take.
+        </li>
+    </ul>
+</div>
+<!-- Back to Home Button -->
+<div class="back-home">
+    <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
+</div>
+{% endblock %}

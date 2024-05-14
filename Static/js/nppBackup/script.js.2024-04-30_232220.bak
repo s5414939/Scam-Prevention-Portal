@@ -1,0 +1,95 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var currentScenarioIndex = 1;
+    var totalScenarios = document.querySelectorAll('.scenario-container').length;
+
+    function showScenario(index) {
+        // Hide all scenarios and show the one that matches the index
+        document.querySelectorAll('.scenario-container').forEach((scenario, i) => {
+            scenario.style.display = (i + 1 === index) ? 'block' : 'none';
+        });
+        currentScenarioIndex = index; // Update the current scenario index
+    }
+
+    function nextScenario() {
+        // Navigate to the next scenario if not the last
+        if (currentScenarioIndex < totalScenarios) {
+            showScenario(currentScenarioIndex + 1);
+        }
+    }
+
+    function prevScenario() {
+        // Navigate to the previous scenario if not the first
+        if (currentScenarioIndex > 1) {
+            showScenario(currentScenarioIndex - 1);
+        }
+    }
+
+    // Set up the event listeners for navigation buttons
+    document.getElementById('prevButton').addEventListener('click', prevScenario);
+    document.getElementById('nextButton').addEventListener('click', nextScenario);
+
+    // Initialize by showing the first scenario
+    showScenario(currentScenarioIndex);
+});
+
+// Function to display the result explanation based on the decision and scenario
+function showResult(decision, scenario) {
+    var explanationText = '';
+
+    switch (scenario) {
+        case 'jane':
+            explanationText = decision === 'legitimate' ?
+                'This scenario is actually a SCAM. No legitimate company would ask for sensitive payment information such as bank card numbers over the phone.' :
+                'You’re correct! It is a SCAM. Well done for being cautious and protecting your personal information.';
+            break;
+        case 'matthew':
+            explanationText = decision === 'legitimate' ?
+                'You’ve been deceived! This scenario is a SCAM. No legitimate company should need to confirm your identity by asking for such personal details unless it’s through secure means.' :
+                'Exactly right! It is indeed a SCAM. Always be wary of calls asking for personal financial control information.';
+            break;
+        default:
+            explanationText = 'No scenario matched. Please check the scenario name.';
+            break;
+    }
+
+    var resultDiv = document.getElementById('result-explanation');
+    resultDiv.innerHTML = explanationText;
+    resultDiv.className = 'result-shown';
+}
+
+// Function to evaluate the scenario decision and redirect or provide feedback
+function evaluateScenario(decision, scenario) {
+    var resultUrl = '';
+    switch (scenario) {
+        case 'jane':
+            resultUrl = decision === 'legitimate' ? '/janescenarioresult' : '';
+            break;
+        case 'matthew':
+            resultUrl = decision === 'legitimate' ? '/matthewscenarioresult' : '';
+            break;
+    }
+
+    if (resultUrl) {
+        window.location.href = resultUrl; // Redirect to the results page if decision is correct
+    } else {
+        alert("Incorrect. Please try again!"); // Alert the user if decision is incorrect
+    }
+	document.addEventListener('DOMContentLoaded', function() {
+    var prevButton = document.getElementById('prevButton');
+    var nextButton = document.getElementById('nextButton');
+
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', prevScenario);
+        nextButton.addEventListener('click', nextScenario);
+    } else {
+        console.error('Navigation buttons not found');
+    }
+
+    var scenarios = document.querySelectorAll('.scenario-container');
+    if (scenarios.length > 0) {
+        showScenario(1);
+    } else {
+        console.error('Scenarios not found');
+    }
+});
+}

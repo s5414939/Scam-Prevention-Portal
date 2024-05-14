@@ -1,0 +1,39 @@
+// Function to display the result explanation
+function showResult(decision, scenario) {
+    var explanationText = '';
+    
+    // Check the decision and prepare the explanation text based on the scenario
+    if (scenario === 'jane') {
+        if (decision === 'legitimate') {
+            explanationText = 'This scenario is actually a SCAM. No legitimate company would ask for sensitive payment information such as bank card numbers over the phone.';
+        } else if (decision === 'scam') {
+            explanationText = 'You’re correct! It is a SCAM. Well done for being cautious and protecting your personal information.';
+        }
+    } else if (scenario === 'matthew') {
+        if (decision === 'legitimate') {
+            explanationText = 'You’ve been deceived! This scenario is a SCAM. No legitimate company should need to confirm your identity by asking for such personal details unless it’s through secure means.';
+        } else if (decision === 'scam') {
+            explanationText = 'Exactly right! It is indeed a SCAM. Always be wary of calls asking for personal financial control information.';
+        }
+    }
+
+    // Get the result explanation div and update it
+    var resultDiv = document.getElementById('result-explanation');
+    resultDiv.innerHTML = explanationText;
+    
+    // Change the class to show the div
+    resultDiv.className = 'result-shown';
+}
+
+// Function to evaluate the scenario decision and redirect or provide feedback
+function evaluateScenario(decision, scenario) {
+    // Redirect to the result page based on the scenario and decision
+    if (scenario === 'jane' && decision === 'legitimate') {
+        window.location.href = '/janescenarioresult';
+    } else if (scenario === 'matthew' && decision === 'legitimate') {
+        window.location.href = '/matthewscenarioresult';
+    } else {
+        // If the decision is incorrect, show an alert
+        alert("Incorrect. Please try again!");
+    }
+}

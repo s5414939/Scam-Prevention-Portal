@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="result-container">
+    <h2>You Are Safe!</h2>
+    <div class="result-details">
+        <p>Jane was able to verify the end of your contract date and the last 4 digits of your banking card this heightens her legitimacy.</p>
+        <p>She was patient, not pressuring you into making quick decisions.</p>
+        <p>You are aware of all your current subscriptions and were expecting a call from the company.</p>
+        <p>You have verified her phone number and it matches the contact details of a legitimate phone company.</p>
+        <p>She did not ask for bank details, legitimate companies never ask for bank details over the phone.</p>
+    </div>
+    <h3>Did you guess right?</h3>
+	<script src="{{ url_for('static/js', filename='script.js') }}"></script>
+</div>
+{% endblock %}

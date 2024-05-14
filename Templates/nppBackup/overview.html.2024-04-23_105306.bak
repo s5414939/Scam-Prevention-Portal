@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Scams Overview: Landline Nuisance Callers</h2>
+<div class="scam-section">
+    <h3>Recognizing Landline Nuisance Calls</h3>
+    <p>Landline nuisance callers often use various tactics to deceive you. Knowing these can help you protect your personal information:</p>
+    <ul>
+        <li><strong>Request for Personal Information:</strong> Callers asking for your name, Date of Birth (D.O.B), or address could be attempting voice phishing.</li>
+        <li><strong>Impatience and Demand:</strong> A caller who is being impatient and demanding is likely trying to pressure you into giving away sensitive information.</li>
+        <li><strong>Robotic Voice:</strong> Calls that sound like they're from a robot might be automated and pre-recorded, used by scammers to reach more potential victims.</li>
+        <li><strong>Request for Bank Details:</strong> No legitimate company will ask for your bank details over the phone. This is a clear red flag.</li>
+    </ul>
+    <img src="{{ url_for('static', filename='images/landline-nuisance-example.jpg') }}" alt="Example of Landline Nuisance Call">
+    <p>Be vigilant and always verify the identity of the caller before providing any personal information.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <article>
+        <header>
+            <div class="ai-scams-section">
+                <h1>What is Artificial Intelligence?</h1>
+                <p>Artificial intelligence is the science of making machines that can think like humans. It can do things that are considered "smart." AI technology can process large amounts of data in ways, unlike humans. The goal for AI is to be able to do things such as recognize patterns, make decisions, and judge like humans.</p>
+                <div class="image-container">
+                    <img src={{ url_for('static', filename='Images/ai.jpg') }} alt="Overview of Artificial Intelligence">
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Understanding AI Scams</h2>
+            <p>As technology evolves, so do the tactics of scammers. It's essential for seniors to stay informed about the risks associated with artificial intelligence (AI) scams.</p>
+        </section>
+
+        <section>
+            <h3>Recognizing Voice-Cloning Scams</h3>
+            <ul>
+                <li>Unexpected Contact: Be careful if someone contacts you without you expecting it.</li>
+                <li>Pressure Tactics: Scammers might try to make you do something quickly without letting you take your time.</li>
+                <li>Urgent Requests: Be cautious if someone urgently asks you for money or personal information, especially through wire transfer, gift cards, or cryptocurrency.</li>
+                <li>Confidentiality: If someone tells you to keep your conversation with them a secret, it could be a warning sign.</li>
+            </ul>
+            <div class="image-container">
+                <img class="small-image" src="{{ url_for('static', filename='Images/VoiceCloning.jpg') }}" alt="Recognizing Voice-Cloning Scams">
+            </div>
+        </section>
+
+        <section>
+            <h3>Identifying Deepfake Scams</h3>
+            <ul>
+                <li>Altered Videos: Watch out for videos with strange movements, sudden changes in lighting, or speech that doesn't match the person talking.</li>
+                <li>Out-of-Character Behavior: Be wary if the speaker behaves oddly or requests money urgently through unusual methods.</li>
+            </ul>
+            <div class="image-container">
+                <img class="small-image" src="{{ url_for('static', filename='Images/DeepFake.jpg') }}" alt="Identifying Deepfake Scams">
+            </div>
+        </section>
+
+        <section>
+            <h3>Protecting Yourself</h3>
+            <ul>
+                <li>Verify Identity: If someone asks personal questions or requests urgent action, make sure it's really your loved one by asking questions only they would know or calling them at a trusted number.</li>
+                <li>Be Skeptical: Take a moment to think before doing anything, especially if you feel rushed or pressured.</li>
+                <li>Report Scams: Report any suspicious activity to the appropriate authorities, such as Action Fraud. Select the 'Contact Us' button in the header for more information on scam support services.</li>
+            </ul>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='Images/actionFraud.jpg') }}" alt="Protecting Yourself">
+            </div>
+        </section>
+
+        <footer>
+            <p>Remember, staying informed and cautious is key to avoiding falling victim to AI scams.</p>
+        </footer>
+    </article>
+</main>
+<!-- Back to Home Button -->
+<div class="back-home">
+    <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
+</div>
+{% endblock %}
