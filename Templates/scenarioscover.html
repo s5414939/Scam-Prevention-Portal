@@ -1,10 +1,33 @@
-{% extends 'base.html' %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Scam Prevention Portal</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Scam Prevention Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="scenarios.html">Scenarios</a></li>
+                <li><a href="overview.html">Scams Overview</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="ai.html">AI Scams</a></li>
+                <li><a href="videosection.html">Video Section</a></li>
+                <li><a href="feedback.html">Feedback Section</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
 <div class="scenario-cover">
     <h2>Welcome to Our Scenario-Based Learning</h2>
     <p>You are about to engage in a series of interactive scenarios that will help you understand and navigate various common scams. These scenarios are designed based on primary data collection and include situations related to landline calls and emails, two frequent mediums through which scams are perpetrated.</p>
     <p>Each scenario will present a situation, and you'll have the choice to decide how you might respond. This exercise aims to enhance your awareness and decision-making skills in real-life situations where you might encounter potential scams.</p>
     <a href="{{ url_for('scenarios') }}" class="button">Start Scenarios</a>
 </div>
-{% endblock %}
+</main>
+</html>

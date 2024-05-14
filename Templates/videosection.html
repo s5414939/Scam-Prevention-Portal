@@ -1,6 +1,28 @@
-{% extends 'base.html' %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Scam Prevention Portal</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Scam Prevention Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="scenarios.html">Scenarios</a></li>
+                <li><a href="overview.html">Scams Overview</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="ai.html">AI Scams</a></li>
+                <li><a href="videosection.html">Video Section</a></li>
+                <li><a href="feedback.html">Feedback Section</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
 
 <div class="video-section">
     <h2>Educational Videos</h2>
@@ -29,4 +51,5 @@ Dear valued viewers, I encourage you to explore two insightful videos that under
         <button onclick="location.href='{{ url_for('home') }}'" class="button back-home-button">Back to Home</button>
 </div>
 </div>
-{% endblock %}
+</main>
+</html>
