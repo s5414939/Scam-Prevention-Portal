@@ -17,7 +17,7 @@ def scenarioscover():
 
 @app.route('/ai')
 def ai():
-    return render_template('ai.html')
+    return render_template('ai.html', title='AI Scams')
 
 @app.route('/overview')
 def overview():
